@@ -1,17 +1,22 @@
-﻿@{
+﻿@model LoopLeader.Models.EmailResponse
+@using LoopLeader.HtmlHelpers
+
+@{
     ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_IndexLayout.cshtml";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<h2>Contact Us</h2>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary()
+        <table style="width:100%;">
+            <tr><td>First name: &nbsp;</td>     <td>@Html.TextBoxFor(x => x.FirstName) &nbsp;</td><td>&nbsp;</td></tr>
+            <tr><td>Last name: &nbsp;</td>      <td>@Html.TextBoxFor(x => x.LastName)&nbsp;</td><td>&nbsp;</td></tr>
+            <tr><td>Email: &nbsp;</td>          <td>@Html.TextBoxFor(x => x.Email)&nbsp;</td><td>&nbsp;</td></tr>
+            <tr><td>Phone: &nbsp;</td>          <td>@Html.TextBoxFor(x => x.Phone)&nbsp;</td><td>&nbsp;</td></tr>
+            <tr><td>Comment: &nbsp;</td>        <td>@Html.TextAreaFor(x => x.Comment)&nbsp;</td><td>&nbsp;</td></tr>
+            <tr><td>&nbsp;</td>                 <td><input type="submit" value="Submit Request" />&nbsp;</td><td>&nbsp;</td></tr>
+        </table>
+    }

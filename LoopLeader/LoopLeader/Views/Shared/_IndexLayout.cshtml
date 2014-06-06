@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/styles.css")" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <script type="text/javascript">
+        var currPic = 1;
+        var totPics = 4;
+        var keepTime;
+        function setupPicChange()
+        { keepTime = setTimeout("changePic()", 5000); }
+        function changePic() {
+            currPic++; if (currPic > totPics) currPic = 1;
+            document.getElementById("picture").src = "/Images/dogpic" + currPic + ".jpg";
+            setupPicChange();
+        }
+    </script>
+</head>
+<body onload ="setupPicChange();">
+    <header>
+        <h1><span style="color:darkgray">The Loop<br />Leader</span></h1>
+        <nav class="memberNav">
+            @Html.Partial("_LoginPartial")
+        </nav>
+        <nav class="horizontalNav">
+            <ul>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                <li>@Html.ActionLink("About Us", "About", "Home")</li>
+                <li>@Html.ActionLink("Order", "List", "Product")</li>
+                <li>@Html.ActionLink("Information", "Info", "Home")</li>
+                <li>@Html.ActionLink("Home", "/", "Home")</li>
+            </ul>
+        </nav>
+    </header>
+    <br />
+    <div class="index">
+        @RenderBody()
+    </div>
+    <footer>
+
+        <nav class="footerNav">
+            <ul>
+                <li>@Html.ActionLink("©" + DateTime.Now.Year + " CMC", "/", "Home")</li>
+                <li>@Html.ActionLink("Sitemap", "/", "Home")</li>
+                <li>@Html.ActionLink("Legal", "/", "Home")</li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
