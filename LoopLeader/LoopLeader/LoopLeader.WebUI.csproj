@@ -159,6 +159,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
@@ -168,6 +169,22 @@
     <Compile Include="Migrations\201406062227573_ConnectionString.cs" />
     <Compile Include="Migrations\201406062227573_ConnectionString.Designer.cs">
       <DependentUpon>201406062227573_ConnectionString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201406070533313_Init.cs" />
+    <Compile Include="Migrations\201406070533313_Init.Designer.cs">
+      <DependentUpon>201406070533313_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201406072219004_IdentityEdit.cs" />
+    <Compile Include="Migrations\201406072219004_IdentityEdit.Designer.cs">
+      <DependentUpon>201406072219004_IdentityEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201406072344095_Init1.cs" />
+    <Compile Include="Migrations\201406072344095_Init1.Designer.cs">
+      <DependentUpon>201406072344095_Init1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201406072351469_Init2.cs" />
+    <Compile Include="Migrations\201406072351469_Init2.Designer.cs">
+      <DependentUpon>201406072351469_Init2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -309,6 +326,17 @@
     <Content Include="Views\Shared\_GeneralLayout.cshtml" />
     <Content Include="Views\Shared\_IndexLayout.cshtml" />
     <Content Include="Views\Shared\_MasterLayout.cshtml" />
+    <Content Include="Views\Admin\ContentEditForm.cshtml" />
+    <Content Include="Views\Admin\ContentIndex.cshtml" />
+    <Content Include="Views\Admin\ContentInfo.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\MemberDelete.cshtml" />
+    <Content Include="Views\Admin\MemberEdit.cshtml" />
+    <Content Include="Views\Admin\MemberIndex.cshtml" />
+    <Content Include="Views\Admin\MemberRoles.cshtml" />
+    <Content Include="Views\Admin\ProductEditForm.cshtml" />
+    <Content Include="Views\Admin\ProductIndex.cshtml" />
+    <Content Include="Views\Admin\ProductInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -329,6 +357,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201406062227573_ConnectionString.resx">
       <DependentUpon>201406062227573_ConnectionString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201406070533313_Init.resx">
+      <DependentUpon>201406070533313_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201406072219004_IdentityEdit.resx">
+      <DependentUpon>201406072219004_IdentityEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201406072344095_Init1.resx">
+      <DependentUpon>201406072344095_Init1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201406072351469_Init2.resx">
+      <DependentUpon>201406072351469_Init2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

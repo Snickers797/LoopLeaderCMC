@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace LoopLeader.Controllers
 {
-    [Authorize]//(Roles = "Admin")]
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
         public AdminController()
@@ -178,7 +178,7 @@ namespace LoopLeader.Controllers
         {
             if (ModelState.IsValid)
             {
-                var idManager = new LoopLeader.Models.ApplicationDbContext.IdentityManager();
+                var idManager = new IdentityManager();
                 var Db = new ApplicationDbContext();
                 var user = Db.Users.First(u => u.UserName == model.UserName);
                 idManager.ClearUserRoles(user.Id);
