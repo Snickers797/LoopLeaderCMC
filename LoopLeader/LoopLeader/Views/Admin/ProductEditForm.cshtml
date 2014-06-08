@@ -16,3 +16,10 @@ Product selected:<br />
 
     <input type="submit" value="Save" />
 }
+
+<h3>Need to delete this product?</h3>
+
+@using (Html.BeginForm("ProductDelete", "Admin", Model))
+{
+    <input type="submit" value="Delete product" />
+}

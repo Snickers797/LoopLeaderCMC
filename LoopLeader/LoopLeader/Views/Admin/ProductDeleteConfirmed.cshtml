@@ -1,0 +1,11 @@
+﻿@model LoopLeader.Domain.Entities.Product
+
+@{
+    ViewBag.Title = "Product " + @Model.ProductName + " has been deleted.";
+    Layout = "~/Views/Shared/_GeneralLayout.cshtml";
+}
+
+<h2>Successfully deleted the product @Model.ProductName.</h2>
+<p>
+    @Html.ActionLink("Done", "Index")
+</p>

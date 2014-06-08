@@ -1,0 +1,18 @@
+﻿@model LoopLeader.Domain.Entities.Product
+
+@{
+    ViewBag.Title = "Delete " + @Model.ProductName + "?";
+    Layout = "~/Views/Shared/_GeneralLayout.cshtml";
+}
+
+<h2>Are you sure that you wish to delete @Model.ProductName?</h2>
+
+@using (Html.BeginForm("ProductDeleteConfirmed", "Admin", Model))
+{
+    <br /><input type="submit" value="Yes!  Delete this product" />
+}
+
+@using (Html.BeginForm("Index", "Admin"))
+{
+    <br /><input type="submit" value="No! Keep this product" />
+}
