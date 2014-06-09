@@ -7,9 +7,9 @@
 
 <h2>Product Edit</h2>
 
-Product selected:<br />
+<strong>Product selected: &nbsp;</strong>
 @Model.ProductName <br />
-
+<br />
 @using (Html.BeginForm("ProductInfo", "Admin", Model))
 {
     @Html.EditorForModel();

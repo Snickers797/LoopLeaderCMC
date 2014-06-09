@@ -4,26 +4,60 @@
     Layout = "~/Views/Shared/_GeneralLayout.cshtml";
 }
 
-<h2>Member Info</h2>
-@Model.ProductName
+<h2>Product Info</h2>
+<table>
+    <tr>
+        <td width="150">
+            <strong>Product Name: &nbsp;</strong>
+        </td>
+        <td>
+            @Model.ProductName
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <strong>Price: &nbsp;</strong>
+        </td>
+        <td>
+            @Model.Price
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <strong>Stock: &nbsp;</strong>
+        </td>
+        <td>
+            @{
+                if (Model.InStock)
+                {
+                    @:IN STOCK
+                }
+                else
+                {
+                    @:OUT OF STOCK
+                }
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <strong>Description: &nbsp;</strong>
+        </td>
+        <td>
+            @Model.Description
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <strong>Category: &nbsp;</strong>
+        </td>
+        <td>
+            @Model.Category
+        </td>
+    </tr>
+
+    @*@Model.Shipping
+        <br />*@
+</table>
 <br />
-@Model.Price
-<br />
-@{
-    if (Model.InStock)
-    {
-        @:IN STOCK
-    }
-    else
-    {
-        @:OUT OF STOCK
-    }
-}
-<br />
-@Model.Description
-<br />
-@Model.Category
-<br />
-@*@Model.Shipping
-<br />*@
 @Html.ActionLink("Done", "Index", "Admin")

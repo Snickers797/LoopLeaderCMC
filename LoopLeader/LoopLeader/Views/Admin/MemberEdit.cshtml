@@ -1,11 +1,11 @@
 ﻿@model LoopLeader.Models.EditUserViewModel
 
 @{
-    ViewBag.Title = "MemberEdit";
+    ViewBag.Title = "Edit Member";
     Layout = "~/Views/Shared/_GeneralLayout.cshtml";
 }
 
-<h2>MemberEdit</h2>
+<h2>Edit Member: @Model.UserName</h2>
 
 
 @using (Html.BeginForm())
@@ -13,7 +13,6 @@
     @Html.AntiForgeryToken()
 
     <section class="form-horizontal">
-        <h4>RegisterViewModel</h4>
         <hr />
         @Html.ValidationSummary(true)
         <section class="form-group">
