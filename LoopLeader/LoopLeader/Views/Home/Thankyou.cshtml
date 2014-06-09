@@ -41,18 +41,18 @@
                 @:<b>Sorry - we couldn't send the email error 1111.</b>
                 }
             }*@
-
+        @* To be set up with clients final email preferances.*@
         @{
             try
             {
 
-                WebMail.SmtpServer = "smtp.mail.yahoo.com";
+                WebMail.SmtpServer = "smtp.mail.TheLoopLeader.com";
                 WebMail.SmtpPort = 587;//465/587
                 WebMail.EnableSsl = true;
-                WebMail.UserName = "TheLoopLeader@yahoo.com";
+                WebMail.UserName = "info@gmail.com";
                 WebMail.Password = "*****";
                 WebMail.From = "contact@TheLoopLeader.com";
-                WebMail.Send("TheLoopLeader@yahoo.com", "TheLoopLeader Form Message",
+                WebMail.Send("TheLoopLeader@gmail.com", "TheLoopLeader Form Message",
                 "First Name:" + Model.FirstName +
                 "Last Name:" + Model.LastName +
                 "Email:" + Model.Email +
