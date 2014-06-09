@@ -4,10 +4,11 @@
     ViewBag.Title = "Legal";
     Layout = "~/Views/Shared/_IndexLayout.cshtml";
 }
-
+<div class="info">
 <h2>Legal</h2>
 
 @if (Model != null)
 {
     <h2>@Html.Raw(@Model.CurrentText)</h2>
 }
+</div>

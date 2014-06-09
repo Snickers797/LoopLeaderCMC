@@ -6,33 +6,33 @@
     Layout = "~/Views/Shared/_IndexLayout.cshtml";
     //Layout = "~/Views/Shared/_MasterLayout.cshtml";
 }
+<div class="info">
+    <h2>Products</h2>
+    <table style="width:100%;">
+        <tr>
+            @foreach (var p in Model.Products)
+            {
 
-<h2>The Loop Leader Price List</h2>
-<table style="width:100%;">
-    <tr>
-        @foreach (var p in Model.Products)
-        {
-
-            <td>
-                <p style="max-height: 200px;">
-                    <img src="~/Images/dog-99213_640.png" width="230" height="175" />
-                    @using (Html.BeginForm("CheckoutConfirm", "Product", new { Id = p.ProductID }))
-                    {
-                        @p.ProductName <br />
-                        @p.Description <br />
-                        @p.Price <br />
-                        @:Quantity: @Html.EditorFor(x => x.Quantity)
-                        <input type="submit" value="Checkout" />
-                    }
-                </p>
-                &nbsp;
-            </td>
-        }
-    </tr>
+                <td>
+                    <p style="max-height: 200px;">
+                        <img src="~/Images/dog-99213_640.png" width="230" height="175" />
+                        @using (Html.BeginForm("CheckoutConfirm", "Product", new { Id = p.ProductID }))
+                        {
+                            @p.ProductName <br />
+                            @p.Description <br />
+                            @p.Price <br />
+                            @:Quantity: @Html.EditorFor(x => x.Quantity)
+                            <input type="submit" value="Checkout" />
+                        }
+                    </p>
+                    &nbsp;
+                </td>
+            }
+        </tr>
 
 
 
-</table>
+    </table>
     @*<script src="https://www.dwolla.com/scripts/button.min.js" class="dwolla_button" type="text/javascript"
                 data-key="6aydCRGwvSl1cB+4vWLeBcGwaN8jwCyhLX6Cz1Okt/RS+3jATD"
                 data-redirect="http://www.theloopleader.com/home/ttlReddirect.cshtml"
@@ -64,7 +64,7 @@
             Url.Action returns a string; Params: 1) controller method, 2) routeValues object *@
         @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x, category = Model.CurrentCategory }))
     </div>
-
+</div>
 
 
 
