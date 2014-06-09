@@ -59,6 +59,7 @@ namespace LoopLeader.Models
             : base("LLDbContext")
         {
         }
+
         public DbSet<Content> Content { get; set; }
         public DbSet<Product> Products { get; set; }
     }
