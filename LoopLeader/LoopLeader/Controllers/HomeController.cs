@@ -41,14 +41,20 @@ namespace LoopLeader.Controllers
 
         public ActionResult Info()
         {
-            return View();
+            ContentRepository repo = new ContentRepository();
+            Content infoContent = (from hc in repo.Content
+                                   where hc.ContentID == "Information"
+                                   select hc).FirstOrDefault<Content>();
+            return View(infoContent);
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            ContentRepository repo = new ContentRepository();
+            Content aboutContent = (from hc in repo.Content
+                                   where hc.ContentID == "About"
+                                   select hc).FirstOrDefault<Content>();
+            return View(aboutContent);
         }
 
         [HttpGet]
@@ -80,6 +86,15 @@ namespace LoopLeader.Controllers
         public ViewResult SiteMap()
         {
             return View();
+        }
+
+        public ActionResult Legal()
+        {
+            ContentRepository repo = new ContentRepository();
+            Content legalContent = (from hc in repo.Content
+                                    where hc.ContentID == "Legal"
+                                    select hc).FirstOrDefault<Content>();
+            return View(legalContent);
         }
     }
 }

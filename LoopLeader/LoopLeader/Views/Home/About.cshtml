@@ -1,10 +1,16 @@
-﻿@model LoopLeader.Models.ContentViewModel
+﻿@model LoopLeader.Domain.Entities.Content
 
 @{
     ViewBag.Title = "About";
     Layout = "~/Views/Shared/_IndexLayout.cshtml";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<div class="info">
+    <h2>@ViewBag.Title.</h2>
+    <h3>@ViewBag.Message</h3>
+    <img src="/Images/MissgraciemissdaisyandI.jpg" />
 
-<p>Use this area to provide additional information.</p>
+    @if (Model != null)
+    {
+        <h2>@Html.Raw(@Model.CurrentText)</h2>
+    }
+</div>

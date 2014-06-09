@@ -3,7 +3,6 @@
 <head>
 
     <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/styles.css")" />
-    @*<link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/bootstrap.min.css")" />*@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <script type="text/javascript">
@@ -37,7 +36,7 @@
         </nav>
     </header>
     <br />
-    <div class="index">
+    <div>
         @RenderBody()
     </div>
     <footer>
@@ -46,7 +45,7 @@
             <ul>
                 <li>@Html.ActionLink("©" + DateTime.Now.Year + " CMC", "/", "Home")</li>
                 <li>@Html.ActionLink("Sitemap", "SiteMap", "Home")</li>
-                <li>@Html.ActionLink("Legal", "/", "Home")</li>
+                <li>@Html.ActionLink("Legal", "Legal", "Home")</li>
             </ul>
         </nav>
         <a href="http://www.loopleader.com/library/z_whats_new.rss"><img src="/Images/icons/feed-icon-14x14.png" alt="Subscribe to What's New"></a>
