@@ -76,5 +76,10 @@ namespace LoopLeader.Controllers
         {
             return View();
         }
+
+        public ViewResult SiteMap()
+        {
+            return View();
+        }
     }
 }

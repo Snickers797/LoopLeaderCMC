@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Site Map";
+    Layout = "~/Views/Shared/_IndexLayout.cshtml";
+}
+
+<h2>LoopLeader Site Map</h2>
+
+@Html.ActionLink("Home", "Index", "Home")<br />
+&nbsp;&nbsp;@Html.ActionLink("About Us", "About", "Home")<br />
+&nbsp;&nbsp;@Html.ActionLink("Contact", "Contact", "Home")<br />
+&nbsp;&nbsp;@Html.ActionLink("Information", "Info", "Home")<br />
+<br />
+@Html.ActionLink("Account Registration", "Register", "Account")<br />
+&nbsp;&nbsp;@Html.ActionLink("Login", "Login", "Account")<br />
+&nbsp;&nbsp;@Html.ActionLink("Account Management", "Manage", "Account")<br />
+<br />
+@Html.ActionLink("Products", "List", "Product")<br />
