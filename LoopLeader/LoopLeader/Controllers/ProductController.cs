@@ -57,8 +57,14 @@ namespace LoopLeader.Controllers
             return View(model);
         }
 
-        public ActionResult CheckoutConfirm(ProductsListViewModel viewModel)
+        public ActionResult CheckoutConfirm(int Id, ProductsListViewModel viewModel)
         {
+            ProductRepository repo = new ProductRepository();
+            //Id is the ID of the product.  We can use that to query the database, and grab its price from there:
+            decimal itemPrice = (from product in repo.Products
+                                 where Id == product.ProductID
+                                 select product).FirstOrDefault<Product>().Price;
+            viewModel.Total = viewModel.Quantity * itemPrice;
             return View(viewModel);
         }
 
