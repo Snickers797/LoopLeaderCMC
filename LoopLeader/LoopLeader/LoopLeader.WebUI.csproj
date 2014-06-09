@@ -254,6 +254,7 @@
     <Content Include="bin\WebGrease.dll" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\llstyles.css" />
     <Content Include="Content\styles.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -277,6 +278,10 @@
     <Content Include="Images\DogWalkingImage4.jpg" />
     <Content Include="Images\DogWalkingImage5.jpg" />
     <Content Include="Images\DogWalkingImage6.jpg" />
+    <Content Include="Images\icons\feed-icon-14x14.png" />
+    <Content Include="Images\icons\feed-icon-28x28.png" />
+    <Content Include="Images\icons\Twitter_logo_blue.png" />
+    <Content Include="Images\icons\Twitter_logo_white.png" />
     <Content Include="Images\MissgraciemissdaisyandI.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
