@@ -64,6 +64,11 @@ namespace LoopLeader.Controllers
             decimal itemPrice = (from product in repo.Products
                                  where Id == product.ProductID
                                  select product).FirstOrDefault<Product>().Price;
+            // Using the item's ID, grab the product name from the repo and put it in the viewmodel to be passed to the view.
+            viewModel.productName = (from product in repo.Products
+                                     where Id == product.ProductID
+                                     select product).FirstOrDefault<Product>().ProductName;
+            //Calculate the total and put it into the viewmodel.
             viewModel.Total = viewModel.Quantity * itemPrice;
             return View(viewModel);
         }

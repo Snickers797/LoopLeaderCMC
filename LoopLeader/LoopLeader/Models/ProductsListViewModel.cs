@@ -12,7 +12,7 @@ namespace LoopLeader.Models
         public IEnumerable<Product> Products { get; set; }
         public PagingInfo PagingInfo { get; set; }
         public string CurrentCategory { get; set; }
-
+        public string productName { get; set; }
         public int Quantity { get; set; }
         public decimal Total { get; set; }
 

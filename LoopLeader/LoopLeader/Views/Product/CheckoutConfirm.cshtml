@@ -9,6 +9,8 @@
 
     @if (Model.Total > 0)
     {
+        <p>@Model.Quantity.ToString() X @Model.productName</p>
+        <p>@Model.Total.ToString("C")</p>
         <script src="https://www.dwolla.com/scripts/button.min.js" class="dwolla_button" type="text/javascript"
                 data-key="ASlm5AzbvQLwhy6WX0dleTppoztXDFuj7ViSNetI9nk7oxCyTz"
                 data-redirect="http://theloopleader.azurewebsites.net/"
